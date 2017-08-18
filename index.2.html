@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<title>Desktop Web Keyboard of number and text</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .keytype {
+        display: none
+    }
+</style>
+
+<body onload="document.getElementById('id01').style.display='none'">
+    <form name="f1" method="get" onblur="document.getElementById('id01').style.display='none';">
+
+        Username : <input type="text" value="" placeholder="Enter the username" class="w3-input" >
+        <br> Name : <input type="text" value="" placeholder="Enter the name" class="w3-input">
+        <br> Password : <input type="password" value="" placeholder="Enter the Password" class="w3-input" >
+        <br> Email : <input type="email" value="" placeholder="Enter the Email" class="w3-input">
+        <br>
+        <br>
+        <input type="submit" value="Submit" class="w3-btn w3-black w3-submit">
+    </form>
+
+
+
+    <!--modal box for number Keyboard-->
+
+
+    <!--Finish of the number Keyboard-->
+
+
+    <br>
+    <!--<div class="w3-container">-->
+        <!--<div class="w3-center">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open OnScreen Keyboard</button>
+            <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-black">Close OnScreen Keyboard</button>
+        </div>-->
+        <!--<div id="id01" class="w3-container  w3-middle w3-center">
+            <div class="w3-card-4">
+                <header class="w3-container w3-blue">
+                    <h2>Browser Keyboard</h2>
+                </header>
+
+                <div class="w3-bar">
+                    <button class="tablink w3-bar-item w3-button" onclick="openkeyboard(event, 'qwerty')">Qwerty</button>
+                    <button class="tablink w3-bar-item w3-button" onclick="openkeyboard(event, 'alphabets')">Alphabets</button>
+                    <button class="tablink w3-bar-item w3-button" onclick="openkeyboard(event, 'number')">Number</button>
+                    <button class="tablink w3-bar-item w3-button" onclick="openkeyboard(event, 'symbols')">Symbols</button>
+                    <input type="button" id="backbtn" value="<  (Backspace)" onclick="pressedkey('back')" class="w3-btn  w3-round-xxlarge">
+                    <br>
+                </div>
+
+                <div id="qwerty" class="w3-container keytype">
+
+                    <input type="button" value="Q" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="W" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="E" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="R" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="T" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="Y" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="U" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="I" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="O" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="P" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="A" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="S" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="D" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="F" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="G" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="H" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="J" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="K" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="L" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="Z" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="X" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="C" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="V" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="B" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="N" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="M" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+
+                </div>
+
+                <div id="alphabets" class="w3-container keytype">
+
+                    <input type="button" value="A" onclick="pressedkey(this);" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="B" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="C" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="D" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="E" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="F" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="G" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="H" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="I" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="J" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="K" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="L" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="M" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="N" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="O" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="P" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="Q" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="R" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="S" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="T" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="U" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="V" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="W" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="X" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="Y" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="Z" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+
+                </div>
+
+                <div id="number" class="w3-container keytype">
+                    <input type="button" value="1" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="2" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="3" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="4" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="5" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="6" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="7" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="8" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="9" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="0" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                </div>
+
+                <div id="symbols" class="w3-container keytype">
+
+                    <input type="button" value="~" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="`" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="!" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="@" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="#" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="$" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="%" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="^" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="&amp;" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value="*" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="(" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value=")" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="_" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="+" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="-" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="=" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="{" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="}" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="[" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="]" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="|" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="\" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge"><br>
+                    <input type="button" value=":" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value=";" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="'" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="&#34;" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="<" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value=">" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="," onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="." onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="?" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                    <input type="button" value="/" onclick="pressedkey(this)" class="w3-btn  w3-round-xxlarge">
+                </div>
+
+                <div class="w3-container w3-light-grey w3-padding">
+
+                    <button class="w3-btn w3-right w3-white w3-border" onclick="closekeyboard()">Done</button>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+
+    <!--
+
+    to implement 
+<script>
+function showkeyboard(element)
+{
+console.log(element);
+switch(element)
+{
+case "":
+    document.getElementById('id01').style.display='block';openkeyboard(event, 'alphabets');
+    break;
+default : console.log("in the default of the show key board");
+
+}
+
+
+
+}
+
+    </script>-->
+
+<!--<!--
+    <script>
+        function openkeyboard(evt, keyboardname, inputfeild) {
+            document.getElementById('id01').style.display = 'block';
+            console.log(evt + "Event on openkeyboard");
+
+            if (inputfeild.type == "text") {
+                document.getElementById("backbtn").style.display = "block";
+            }
+            else {
+                document.getElementById("backbtn").style.display = "none";
+            }
+
+
+            var i, x, tablinks;
+            x = document.getElementsByClassName("keytype");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].classList.remove("w3-light-grey");
+            }
+            document.getElementById(keyboardname).style.display = "block";
+            evt.currentTarget.classList.add("w3-light-grey");
+        }
+        function closekeyboard() {
+            document.getElementById('id01').style.display = 'none';
+
+        }
+    </script>
+
+
+    <script>
+        var getElementByIdtosetItsValue;
+
+        function keymaptothis(element) {
+            console.log("in the keymaptothis")
+            getElementByIdtosetItsValue = element;
+            console.log(getElementByIdtosetItsValue);
+        }
+
+        function pressedkey(element) {
+            console.log("it the pressed key method and setting this input  " + getElementByIdtosetItsValue);
+            console.log(element);
+            if (getElementByIdtosetItsValue == undefined) {
+                var d = alert("Please select a text box first");
+                // console.log(d);
+            }
+            else {
+                if (element == 'back') {
+                    var valuetoedit = getElementByIdtosetItsValue;
+                    if (valuetoedit.type == "text") {
+                        console.log(valuetoedit.type == "text");
+                        var position = valuetoedit.selectionStart;
+                        var c = valuetoedit.value.slice(0, valuetoedit.selectionStart - 1) + valuetoedit.value.slice(valuetoedit.selectionStart);
+                        getElementByIdtosetItsValue.value = c;
+                        getElementByIdtosetItsValue.selectionStart = position - 1;
+
+                    }
+                    else {
+
+                    }
+                }
+                else {
+                     
+                    
+                    getElementByIdtosetItsValue.value += element.value;
+
+                    //to do the middle cursor adding in the textbox;
+                }
+
+            }
+        }
+
+
+
+        // function toggleCaps(element) {
+
+
+        // }
+
+
+        // function createKeyboardbuttons(keyboardtype) {
+
+        //     console.log("Keyboard type is : " + keyboardtype);
+        //     switch (keyboardtype) {
+        //         case 1: {
+        //             break;
+        //         }
+        //         case 2: {
+        //             break;
+        //         }
+        //         case 3: {
+        //             break;
+
+        //         }
+        //         case 4:
+        //             { break; }
+
+        //         case 5: {
+        //             break;
+
+        //         }
+
+        //         default: {
+        //             console.log("in the default key board type");
+        //             break;
+        //         }
+
+
+        //     }
+        //     console.log("Exited the switch case");
+
+
+
+
+        // }
+    </script>-->
+
+
+
+
+    <!--<script type="text/javascript">
+     function generateButtons(keyboardtype , gottenVariable)
+
+          var valueofbutton = gottenVariable;
+
+        var i, buttonContainer, newButton;
+
+var keyboardtype;
+
+          buttonContainer = document.getElementById(keyboardtype);
+        for (i = 0; i < valueofbutton.length; i++) {
+          newButton = document.createElement('input');
+          newButton.type = 'button';
+          newButton.value = valueofbutton;
+          newButton.id = "button" + valueofbutton;
+          newButton.class="w3-btn w3-padding w3-black";
+          newButton.onclick = function () {
+           pressedkey(this)
+          };
+          buttonContainer.appendChild(newButton);
+        }
+   
+    </script>-->
+
+</body>
+
+</html>
+
+
+<!--modal box for the text Keyboard-->
+
+<!--Finish of the text Keyboard-->
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+//TO DO   HITESH HITECH  
+done
+at line number 177  or Below the last div close 
+generate the funvtion showkeyboard to be witten in the textbox of the input feilds in send 
+the type of the textbox to show which textbox to display to the user .-
+
+
+inserting the text in middle of the textbox input to add at line number 267 in the elsse block  
+
+
+-->
+
+
+

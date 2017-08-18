@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 100px;
+    height: 100px;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: 5px solid transprent;
+    border-bottom:5px solid black;
+    border-radius:50%;
+
+
+}
+
+
+
+/* Standard syntax */
+@keyframes example {
+0%   {-ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari */
+    transform: rotate(0deg);}
+   25%   {-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);}
+    50%  {-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg);}
+    75%  {-ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Safari */
+    transform: rotate(270deg);}
+       100% {-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);}
+}
+</style>
+</head>
+<body onunload="confirm('do you want to exit');">
+ <!--onpageshow="alert('you came visiting other tab')" onpagehide="alert('cannot go to other page')"-->
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+    function f1(el) {
+    var val = el.value;
+   val = el.slice(0,el.selectionStart) + el.slice(el.selectionStart);
+   alert(val);  
+}
+</script>
+</head>
+<body>
+<input type=text id=t1 value=abcd>
+    <button onclick="f1(document.getElementById('t1'))">check position</button>
+</body>
+</html>

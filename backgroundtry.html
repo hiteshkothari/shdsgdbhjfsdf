@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 255px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+}
+body{
+    margin: 0px;
+}
+</style>
+</head>
+<body>
+
+
+<div onmousemove="redhover(event)">RED</div>
+<div  onmousemove="greenhover(event)">Green</div>
+<div  onmousemove="bluehover(event)">Blue</div>
+<p id="demo"></p>
+
+
+
+
+
+
+<script>
+var r=0,g=0,b=0;
+
+
+function maincolor(r,g,b)
+{
+console.log("Red : "+ r + " , Green : " + g +" , Blue : " + b );
+document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+}
+
+
+function redhover(rr)
+{
+     r = showCoords(event)
+    //r=rr;
+    console.log(r);
+maincolor(r,g,b);
+}
+function greenhover(rr)
+{
+     g= showCoords(event)
+    // g=rr;
+    console.log(g);
+maincolor(r,g,b);
+
+}
+function bluehover(rr)
+{
+    b = showCoords(event)
+    // b=rr;
+    console.log(b);
+maincolor(r,g,b);
+
+}
+
+
+
+function showCoords(event) {
+    var cX = event.clientX;
+     var cY = event.clientY;
+    return cX;
+}
+
+
+      
+</script>
+</body>
+
+</html>
+
+<!--
+    // var sX = event.screenX;
+    // var cY = event.clientY;
+    // var sY = event.screenY;
+    // var coords1 = "client - X: " + cX + ", Y coords: " + cY;
+    // var coords2 = "screen - X: " + sX + ", Y coords: " + sY;
+    // document.getElementById("demo").innerHTML = coords1 + "<br>" + coords2;
+    // console.log("#" + cX+cY);
+// if(cX<100)
+// {
+
+// }
+// if(cY<100)
+// {
+
+
+// }
+// if(cY>256)
+// {
+
+// }
+// if(cX>256)
+// {
+
+// }
+
+
+
+
+
+
+// x axis for = cyan 100  magenta 100 yellow 100 
+// y axis for Black
+
+
+    //  document.body.style.backgroundColor =rgb(255,130,255);-->
